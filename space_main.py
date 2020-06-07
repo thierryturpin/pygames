@@ -24,6 +24,13 @@ EnemyY = random.randint(50, 150)
 EnemyX_change = 1
 EnemyY_change = 40
 
+# Bullet
+BulletImg = pygame.image.load('bullet.png')
+BulletX = 0
+BulletY = 480
+BulletX_change = 0
+BulletY_change = 40
+
 def player(x, y):
     screen.blit(PlayerImg, (x, y))
 
@@ -40,6 +47,10 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+
 
     # Check if keyboard arrow left or right is pressed
         if event.type == pygame.KEYDOWN:
